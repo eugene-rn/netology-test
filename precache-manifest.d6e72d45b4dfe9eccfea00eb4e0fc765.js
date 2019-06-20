@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2e498dd1b51c6157c587a10e8a713120",
+    "revision": "910c3ec65e90048eb19a55fe44c96b38",
     "url": "/netology-test/index.html"
   },
   {
-    "revision": "8f44a55559b4ae906b99",
+    "revision": "fa1cd46f8de95ac9916d",
     "url": "/netology-test/static/css/main.0dffb91b.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/netology-test/static/js/2.7aadd51a.chunk.js"
   },
   {
-    "revision": "8f44a55559b4ae906b99",
-    "url": "/netology-test/static/js/main.3e6eebe1.chunk.js"
+    "revision": "fa1cd46f8de95ac9916d",
+    "url": "/netology-test/static/js/main.d08175ef.chunk.js"
   },
   {
     "revision": "40449b6ba82517b5cffd",
