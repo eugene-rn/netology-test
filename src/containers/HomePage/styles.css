@@ -1,0 +1,20 @@
+.list {
+  width: 800px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.table-header {
+  height: 50px;
+}
+
+.table-line {
+  height: 40px;
+  cursor: pointer;
+}
+
+.table-line td,
+.table-header th {
+  border-bottom: 1px solid #f1efef;
+}

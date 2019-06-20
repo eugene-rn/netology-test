@@ -1,0 +1,52 @@
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 5;
+}
+
+.modal-box {
+  position: fixed;
+  left: calc(50% - 250px);
+  top: 100px;
+  background: #fff;
+  width: 500px;
+  padding: 30px;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0 15px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-text, .area {
+  margin-top: 5px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #f1efef;
+  outline: none;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.area {
+  padding: 10px;
+  resize: none;
+  height: 100px;
+}
+
+.modal-title {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
