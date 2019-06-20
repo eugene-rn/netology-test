@@ -1,8 +1,8 @@
 import React from "react";
 import "./styles.css";
 
-const Button = ({ onClick, children, ...rest }) => (
-  <button className="btn" onClick={onClick} {...rest}>
+const Button = ({ onClick, children, className, ...rest }) => (
+  <button className={`btn ${className ? className : ""}`} onClick={onClick} {...rest}>
     {children}
   </button>
 );

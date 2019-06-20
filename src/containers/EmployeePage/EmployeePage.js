@@ -25,7 +25,7 @@ const EmployeePage = ({
         <div className="header">
           <Button onClick={() => history.push("/")}>Назад к списку</Button>
           <h3>Страница сотрудника #{employee.id}</h3>
-          <Button onClick={onOpenModal}>Редактировать</Button>
+          <Button onClick={onOpenModal} className="edit-btn">Редактировать</Button>
         </div>
         <div className="info">
           <p>

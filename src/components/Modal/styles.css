@@ -17,6 +17,16 @@
   padding: 30px;
   border-radius: 5px;
   z-index: 10;
+  box-sizing: border-box;
+}
+
+@media (max-width: 550px) {
+  .modal-box {
+    left: 0;
+    top: 0;
+    border-radius: 0;
+    width: 100%;
+  }
 }
 
 .form-box {
@@ -49,4 +59,18 @@
 .modal-title {
   margin-bottom: 20px;
   font-weight: 500;
+}
+
+.bottom-buttons .btn {
+  margin-right: 15px;
+}
+
+@media(max-width: 620px) {
+  .bottom-buttons {
+    display: flex;
+    justify-content: space-around;
+  }
+  .bottom-buttons .btn:last-child {
+    margin-right: 0;
+  }
 }

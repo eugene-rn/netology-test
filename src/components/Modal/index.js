@@ -97,9 +97,14 @@ class Modal extends React.Component {
                 value={description}
               />
             </div>
-            <Button onClick={this.handleSumbit} disabled={!isBtnEnabled}>
-              {isEdit ? "Сохранить" : "Добавить"}
-            </Button>
+            <div className="bottom-buttons">
+              <Button onClick={this.handleSumbit} disabled={!isBtnEnabled}>
+                {isEdit ? "Сохранить" : "Добавить"}
+              </Button>
+              <Button onClick={onClose} className="red">
+                Отменить
+              </Button>
+            </div>
           </form>
         </div>
       </>

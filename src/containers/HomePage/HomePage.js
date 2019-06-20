@@ -20,34 +20,41 @@ const HomePage = ({
   history
 }) => {
   return (
-  <>
-    <table className="list" cellSpacing="0">
-      <thead>
-        <tr className="table-header">
-          <th>Имя</th>
-          <th>Фамилия</th>
-          <th>Должность</th>
-        </tr>
-      </thead>
-      <tbody>
-        {employees.map(item => (
-          <tr className="table-line" key={item.id} onClick={() => history.push(`/${item.id}`)}>
-            <td>{item.firstName}</td>
-            <td>{item.lastName}</td>
-            <td>{item.position}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-    <Button onClick={onOpenModal}>Добавить сотрудника</Button>
-    {isModalOpen && (
-      <Modal
-        onClose={onCloseModal}
-        onSubmit={employee => onAddEmployee(employee)}
-      />
-    )}
-  </>
-)};
+    <>
+      <div className="table-box">
+        <table className="list" cellSpacing="0">
+          <thead>
+            <tr className="table-header">
+              <th>Имя</th>
+              <th>Фамилия</th>
+              <th>Должность</th>
+            </tr>
+          </thead>
+          <tbody>
+            {employees.map(item => (
+              <tr
+                className="table-line"
+                key={item.id}
+                onClick={() => history.push(`/${item.id}`)}
+              >
+                <td>{item.firstName}</td>
+                <td>{item.lastName}</td>
+                <td>{item.position}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <Button onClick={onOpenModal}>Добавить сотрудника</Button>
+      {isModalOpen && (
+        <Modal
+          onClose={onCloseModal}
+          onSubmit={employee => onAddEmployee(employee)}
+        />
+      )}
+    </>
+  );
+};
 
 const mapStateToProps = createStructuredSelector({
   employees: makeSelectEmployees(),

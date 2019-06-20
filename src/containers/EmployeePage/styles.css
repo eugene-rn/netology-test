@@ -6,6 +6,13 @@
   box-sizing: border-box;
 }
 
+@media (max-width: 820px) {
+  .employee {
+    margin: 0;
+    width: 100%;
+  }
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -23,4 +30,19 @@
 
 .info p {
   margin: 7px 0;
+}
+
+@media (max-width: 620px) {
+  h3 {
+    width: 100%;
+    order: -1;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .edit-btn {
+    margin: 10px 0;
+  }
 }
