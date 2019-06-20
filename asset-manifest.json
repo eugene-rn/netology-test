@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/netology-test/static/css/main.0dffb91b.chunk.css",
-    "main.js": "/netology-test/static/js/main.1f6668df.chunk.js",
-    "main.js.map": "/netology-test/static/js/main.1f6668df.chunk.js.map",
+    "main.js": "/netology-test/static/js/main.3e6eebe1.chunk.js",
+    "main.js.map": "/netology-test/static/js/main.3e6eebe1.chunk.js.map",
     "runtime~main.js": "/netology-test/static/js/runtime~main.edcd8d2e.js",
     "runtime~main.js.map": "/netology-test/static/js/runtime~main.edcd8d2e.js.map",
     "static/js/2.7aadd51a.chunk.js": "/netology-test/static/js/2.7aadd51a.chunk.js",
     "static/js/2.7aadd51a.chunk.js.map": "/netology-test/static/js/2.7aadd51a.chunk.js.map",
     "index.html": "/netology-test/index.html",
-    "precache-manifest.9d684de1c39acd37157e7f695499ffd6.js": "/netology-test/precache-manifest.9d684de1c39acd37157e7f695499ffd6.js",
+    "precache-manifest.e436bb276bbfe9a3757e0a75291a2c1e.js": "/netology-test/precache-manifest.e436bb276bbfe9a3757e0a75291a2c1e.js",
     "service-worker.js": "/netology-test/service-worker.js",
     "static/css/main.0dffb91b.chunk.css.map": "/netology-test/static/css/main.0dffb91b.chunk.css.map"
   }

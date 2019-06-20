@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/netology-test/precache-manifest.9d684de1c39acd37157e7f695499ffd6.js"
+  "/netology-test/precache-manifest.e436bb276bbfe9a3757e0a75291a2c1e.js"
 );
 
 self.addEventListener('message', (event) => {
