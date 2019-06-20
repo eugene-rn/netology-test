@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import PropTypes from 'prop-types';
 import Button from "../Button";
 import "./styles.css";
 
@@ -113,10 +114,27 @@ class Modal extends React.Component {
 
   render() {
     return ReactDOM.createPortal(
-      this.renderModal(this.props.onClose, this.props.onSave),
+      this.renderModal(this.props.onClose),
       this.element
     );
   }
+}
+
+Modal.propTypes = {
+  isEdit: PropTypes.bool,
+  initialData: PropTypes.shape({
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
+    position: PropTypes.string,
+    description: PropTypes.string,
+  }),
+  onSubmit: PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired,
+}
+
+Modal.defaultProps = {
+  isEdit: false,
+  initialData: null,
 }
 
 export default Modal;

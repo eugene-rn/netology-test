@@ -54,6 +54,7 @@
   padding: 10px;
   resize: none;
   height: 100px;
+  font-family: inherit;
 }
 
 .modal-title {

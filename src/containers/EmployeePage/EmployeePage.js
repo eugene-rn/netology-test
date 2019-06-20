@@ -1,5 +1,6 @@
 import React from "react";
 import { createStructuredSelector } from "reselect";
+import PropTypes from 'prop-types';
 import { compose } from "redux";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
@@ -65,6 +66,18 @@ export const mapDispatchToProps = dispatch => ({
   onCloseModal: () => dispatch(closeModal()),
   onEditEmployee: employee => dispatch(editEmployee(employee))
 });
+
+EmployeePage.propTypes = {
+  employee: PropTypes.object,
+  isModalOpen: PropTypes.bool.isRequired,
+  onCloseModal: PropTypes.func.isRequired,
+  onOpenModal: PropTypes.func.isRequired,
+  onEditEmployee: PropTypes.func.isRequired,
+}
+
+EmployeePage.defaultProps = {
+  employee: {},
+}
 
 const withConnect = connect(
   mapStateToProps,

@@ -7,7 +7,6 @@ export const initialState = {
 
 const modalReducer = (state = initialState, action) =>
   produce(state, draft => {
-    // eslint-disable-next-line default-case
     switch (action.type) {
       case OPEN_MODAL:
         draft.isOpen = true;
@@ -15,6 +14,8 @@ const modalReducer = (state = initialState, action) =>
       case CLOSE_MODAL:
         draft.isOpen = false;
         break;
+      default:
+        return state;
     }
   });
 export default modalReducer;
