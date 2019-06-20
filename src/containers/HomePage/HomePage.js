@@ -1,5 +1,7 @@
 import React from "react";
+import { compose } from "redux";
 import { createStructuredSelector } from "reselect";
+import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import Button from "components/Button";
 import { makeSelectIsModalOpen } from "containers/App/selectors";
@@ -14,8 +16,10 @@ const HomePage = ({
   onCloseModal,
   onAddEmployee,
   isModalOpen,
-  employees
-}) => (
+  employees,
+  history
+}) => {
+  return (
   <>
     <table className="list" cellSpacing="0">
       <thead>
@@ -27,7 +31,7 @@ const HomePage = ({
       </thead>
       <tbody>
         {employees.map(item => (
-          <tr className="table-line" key={item.id}>
+          <tr className="table-line" key={item.id} onClick={() => history.push(`/${item.id}`)}>
             <td>{item.firstName}</td>
             <td>{item.lastName}</td>
             <td>{item.position}</td>
@@ -43,7 +47,7 @@ const HomePage = ({
       />
     )}
   </>
-);
+)};
 
 const mapStateToProps = createStructuredSelector({
   employees: makeSelectEmployees(),
@@ -56,7 +60,12 @@ export const mapDispatchToProps = dispatch => ({
   onAddEmployee: employee => dispatch(addEmployee(employee))
 });
 
-export default connect(
+const withConnect = connect(
   mapStateToProps,
   mapDispatchToProps
+);
+
+export default compose(
+  withConnect,
+  withRouter
 )(HomePage);

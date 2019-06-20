@@ -6,14 +6,15 @@ import "./styles.css";
 const modalRoot = document.getElementById("modal");
 
 class Modal extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.element = document.createElement("div");
     this.state = {
-      firstName: "",
-      lastName: "",
-      position: "",
-      description: ""
+      id: props.initialData ? props.initialData.id : null,
+      firstName: props.initialData ? props.initialData.firstName : "",
+      lastName: props.initialData ? props.initialData.lastName : "",
+      position: props.initialData ? props.initialData.position : "",
+      description: props.initialData ? props.initialData.description : ""
     };
   }
 

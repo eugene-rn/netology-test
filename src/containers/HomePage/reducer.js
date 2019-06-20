@@ -19,7 +19,11 @@ const employeeReducer = (state = initialState, action) =>
         draft.push(action.employee);
         break;
       case EDIT_EMPLOYEE:
-        draft.employees = [];
+        const { id } = action.employee;
+        const index = draft.findIndex(emp => emp.id === id);
+        Object.keys(draft[index]).forEach(
+          item => (draft[index][item] = action.employee[item])
+        );
         break;
       default:
         return state;
